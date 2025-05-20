@@ -3,44 +3,106 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Gruppe3</title>
+    <title>@ViewData["Title"] - PollenVarsel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Gruppe3.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        .navbar {
+            padding: 0.8rem 1rem;
+            background-color: #f8f9fa !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #2c3e50 !important;
+            margin-left: 1rem; /* Justert margin */
+        }
+        
+        .nav-link-custom {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            margin: 0 0.3rem;
+            border-radius: 4px;
+            color: #2c3e50 !important;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link-custom:hover {
+            background-color: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link-custom.active {
+            background-color: #3498db;
+            color: white !important;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            order: -1; /* Flytter knappen til venstre */
+            margin-right: 0;
+        }
+        
+        .navbar-collapse {
+            flex-grow: 0; /* Forhindrer at menyen tar opp hele bredden */
+        }
+        
+        .navbar-nav {
+            margin-right: auto; /* Skyver menyen til venstre */
+        }
+        
+        @@media (max-width: 991.98px) {
+            .nav-link-custom {
+                margin: 0.3rem 0;
+                padding: 0.8rem 1rem;
+            }
+            .navbar-brand {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Gruppe3</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Toggler knapp flyttet før brand -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-flower1"></i> PollenVarsel
+                </a>
+                
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <div class="navbar-nav">
+                        <a class="nav-link-custom nav-link" asp-controller="Home" asp-action="Index">Hjem</a>
+                        <a class="nav-link-custom nav-link" asp-controller="PollenRegistering" asp-action="Index">Pollenregistrering</a>
+                        <a class="nav-link-custom nav-link" asp-controller="PollenAPI" asp-action="Index">PollenVarsel</a>
+                        <a class="nav-link-custom nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted py-3">
         <div class="container">
-            &copy; 2025 - Gruppe3 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - Gruppe3 - <a asp-controller="Home" asp-action="Privacy">Personvern</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
