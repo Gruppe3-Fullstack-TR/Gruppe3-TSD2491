@@ -17,63 +17,65 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Gruppe3
 build_property.RootNamespace = Gruppe3
-build_property.ProjectDir = /home/admin1808/TSD2491-Gruppe3/Gruppe3/
+build_property.ProjectDir = C:\programvareutvikling\eksamen\Gruppe3-TSD2491\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/admin1808/TSD2491-Gruppe3/Gruppe3
+build_property.MSBuildProjectDirectory = C:\programvareutvikling\eksamen\Gruppe3-TSD2491
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/PollenAPI/index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbGVuQVBJL2luZGV4LmNzaHRtbA==
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/PollenAPI/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbGVuQVBJXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/PollenRegistering/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbGVuUmVnaXN0ZXJpbmcvQ3JlYXRlLmNzaHRtbA==
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/PollenRegistering/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbGVuUmVnaXN0ZXJpbmdcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/PollenRegistering/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbGVuUmVnaXN0ZXJpbmcvRGVsZXRlLmNzaHRtbA==
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/PollenRegistering/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbGVuUmVnaXN0ZXJpbmdcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/PollenRegistering/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbGVuUmVnaXN0ZXJpbmcvRGV0YWlscy5jc2h0bWw=
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/PollenRegistering/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbGVuUmVnaXN0ZXJpbmdcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/PollenRegistering/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbGVuUmVnaXN0ZXJpbmcvRWRpdC5jc2h0bWw=
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/PollenRegistering/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbGVuUmVnaXN0ZXJpbmdcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/PollenRegistering/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbGVuUmVnaXN0ZXJpbmcvSW5kZXguY3NodG1s
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/PollenRegistering/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbGVuUmVnaXN0ZXJpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/admin1808/TSD2491-Gruppe3/Gruppe3/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-fb1jubzacp
+[C:/programvareutvikling/eksamen/Gruppe3-TSD2491/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iu4w36qzds

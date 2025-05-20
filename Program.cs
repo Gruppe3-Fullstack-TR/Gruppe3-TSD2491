@@ -10,6 +10,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<Gruppe3.Service.IPollenAPIService, Gruppe3.Service.PollenAPIService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,7 +42,10 @@ using (var scope = app.Services.CreateScope())
     {
         var context = services.GetRequiredService<AppDbContext>();
         context.Database.EnsureCreated(); // Bruk denne kun under utvikling
-        // For produksjon, bruk migrasjoner: context.Database.Migrate();
+
+        // Kall pollen-import tjenesten ved oppstart
+        var pollenService = services.GetRequiredService<Gruppe3.Service.IPollenAPIService>();
+        await pollenService.ImportPollenDataAsync();
     }
     catch (Exception ex)
     {
