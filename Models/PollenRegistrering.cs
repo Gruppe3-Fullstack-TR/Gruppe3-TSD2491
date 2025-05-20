@@ -2,24 +2,21 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace GruppeX.Models
+namespace Gruppe3.Models
 {
     public class PollenRegistering
     {
         public int Id { get; set; }
         
         [Required]
-        public string PollenType { get; set; }
+        public string TypeOfPollen { get; set; }
         
         [Required]
-        public int Concentration { get; set; }
+        public int Level { get; set; }
         
         [DataType(DataType.Date)]
-        public DateTime RegistrationDate { get; set; }
-        
-        public string Location { get; set; }
-        
-        public string RegisteredBy { get; set; }
+        public DateTime Date { get; set; }
+
     }
 }
 

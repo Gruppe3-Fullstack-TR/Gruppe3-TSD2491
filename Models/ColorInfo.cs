@@ -1,12 +1,15 @@
-// ColorInfo.cs
-namespace GruppeX.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace Gruppe3.Models
 {
     public class ColorInfo
     {
+        [Key]
         public int Id { get; set; }
-        public int Red { get; set; }
-        public int Green { get; set; }
-        public int Blue { get; set; }
-        public string Description { get; set; }
+        public float Red { get; set; }
+        public float Green { get; set; }
+        public float Blue { get; set; }
+
+        public ICollection<IndexInfo> IndexInfos { get; set; }
     }
 }
