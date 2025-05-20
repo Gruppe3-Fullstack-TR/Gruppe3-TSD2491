@@ -32,27 +32,47 @@ namespace Gruppe3.Service
                 response.EnsureSuccessStatusCode();
                 var json = await response.Content.ReadAsStringAsync();
 
+                // Logg JSON for feilsøking
+                _logger.LogInformation("API response: " + json);
+
                 var data = JsonSerializer.Deserialize<PollenApiResponse>(json);
 
-                if (data?.dailyInfo != null)
+                if (data?.DailyInfo != null)
                 {
-                    foreach (var day in data.dailyInfo)
+                    foreach (var day in data.DailyInfo)
                     {
-                        foreach (var idx in day.indexes)
+                        if (day?.PollenTypeInfo == null)
                         {
-                            // Sjekk om fargen finnes fra før
+                            _logger.LogWarning("Ingen pollenTypeInfo for dag: {@day}", day);
+                            continue;
+                        }
+
+                        foreach (var type in day.PollenTypeInfo)
+                        {
+                            var idx = type.IndexInfo;
+                            if (idx == null || idx.Color == null)
+                            {
+                                _logger.LogWarning("Null indexInfo eller color for pollenType: {@type}", type);
+                                continue;
+                            }
+
+                            // Fargene i API-et er float mellom 0 og 1, konverter til int 0-255
+                            int r = idx.Color.Red.HasValue ? (int)(idx.Color.Red.Value * 255) : 0;
+                            int g = idx.Color.Green.HasValue ? (int)(idx.Color.Green.Value * 255) : 0;
+                            int b = idx.Color.Blue.HasValue ? (int)(idx.Color.Blue.Value * 255) : 0;
+
                             var color = _context.ColorInfos.FirstOrDefault(c =>
-                                c.Red == idx.color.red &&
-                                c.Green == idx.color.green &&
-                                c.Blue == idx.color.blue);
+                                c.Red == r &&
+                                c.Green == g &&
+                                c.Blue == b);
 
                             if (color == null)
                             {
                                 color = new ColorInfo
                                 {
-                                    Red = idx.color.red,
-                                    Green = idx.color.green,
-                                    Blue = idx.color.blue
+                                    Red = r,
+                                    Green = g,
+                                    Blue = b
                                 };
                                 _context.ColorInfos.Add(color);
                                 await _context.SaveChangesAsync();
@@ -60,11 +80,11 @@ namespace Gruppe3.Service
 
                             var indexInfo = new IndexInfo
                             {
-                                Code = idx.code,
-                                DisplayName = idx.displayName,
-                                Value = idx.value,
-                                Category = idx.category,
-                                IndexDescription = idx.indexDescription,
+                                Code = idx.Code,
+                                DisplayName = idx.DisplayName,
+                                Value = idx.Value,
+                                Category = idx.Category,
+                                IndexDescription = idx.IndexDescription,
                                 ColorInfoId = color.Id
                             };
                             _context.IndexInfos.Add(indexInfo);

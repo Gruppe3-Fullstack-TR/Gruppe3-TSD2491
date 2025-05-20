@@ -17,14 +17,14 @@ namespace Gruppe3.Controllers
             _pollenService = pollenService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            // Hent de 5 siste pollenregistreringene
-            var indexList = _context.IndexInfos
+            // Hent de 5 siste pollenregistreringene asynkront
+            var indexList = await _context.IndexInfos
                                     .Include(i => i.ColorInfo)
                                     .OrderByDescending(i => i.Id)
                                     .Take(5)
-                                    .ToList();
+                                    .ToListAsync();
 
             return View(indexList);
         }
@@ -44,6 +44,18 @@ namespace Gruppe3.Controllers
             int g = (int)indexInfo.ColorInfo.Green;
             int b = (int)indexInfo.ColorInfo.Blue;
             return $"rgb({r}, {g}, {b})";
+        }
+
+        public async Task<IActionResult> Import()
+        {
+            await _pollenService.ImportPollenDataAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult TestData()
+        {
+            var count = _context.IndexInfos.Count();
+            return Content($"Antall IndexInfo: {count}");
         }
     }
 }
