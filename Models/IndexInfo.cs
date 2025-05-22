@@ -18,5 +18,6 @@ namespace Gruppe3.Models
         public ColorInfo ColorInfo { get; set; }
 
         public ICollection<PlantInfo> PlantInfos { get; set; }
+        public DateTime Date { get; set; } // <-- Legg til denne
     }
 }

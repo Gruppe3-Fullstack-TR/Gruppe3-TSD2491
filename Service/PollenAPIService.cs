@@ -47,6 +47,8 @@ namespace Gruppe3.Service
                             continue;
                         }
 
+                        var date = new DateTime(day.Date.Year, day.Date.Month, day.Date.Day);
+
                         foreach (var type in day.PollenTypeInfo)
                         {
                             var idx = type.IndexInfo;
@@ -85,7 +87,8 @@ namespace Gruppe3.Service
                                 Value = idx.Value,
                                 Category = idx.Category,
                                 IndexDescription = idx.IndexDescription,
-                                ColorInfoId = color.Id
+                                ColorInfoId = color.Id,
+                                Date = date
                             };
                             _context.IndexInfos.Add(indexInfo);
                         }

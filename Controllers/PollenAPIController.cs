@@ -19,14 +19,21 @@ namespace Gruppe3.Controllers
 
         public async Task<IActionResult> Index()
         {
-            // Hent de 5 siste pollenregistreringene asynkront
+            // Hent alle IndexInfo med ColorInfo
             var indexList = await _context.IndexInfos
-                                    .Include(i => i.ColorInfo)
-                                    .OrderByDescending(i => i.Id)
-                                    .Take(5)
-                                    .ToListAsync();
+                .Include(i => i.ColorInfo)
+                .OrderByDescending(i => i.Date)
+                .ToListAsync();
 
-            return View(indexList);
+            // Gruppér på dato og ta f.eks. den med høyest verdi per dag
+            var perDay = indexList
+                .GroupBy(i => i.Date.Date)
+                .Select(g => g.OrderByDescending(x => x.Value).First())
+                .OrderByDescending(x => x.Date)
+                .Take(5)
+                .ToList();
+
+            return View(perDay);
         }
 
         /// <summary>

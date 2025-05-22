@@ -9,6 +9,7 @@
 <table class="table table-bordered">
     <thead>
         <tr>
+            <th>Dato</th>
             <th>Kode</th>
             <th>Navn</th>
             <th>Nivå</th>
@@ -21,14 +22,15 @@
         @foreach (var item in Model.Take(5))
         {
             <tr>
+                <td>
+                    @item.Date.ToString("yyyy-MM-dd")
+                </td>
                 <td>@item.Code</td>
                 <td>@item.DisplayName</td>
                 <td>@item.Value</td>
                 <td>@item.Category</td>
                 <td>@item.IndexDescription</td>
-                <td style="background-color: @(item.ColorInfo != null ? $"rgb({item.ColorInfo.Red}, {item.ColorInfo.Green}, {item.ColorInfo.Blue})" : "white");">
-                    <!-- Ikke skriv ut RGB-verdiene her -->
-                </td>
+                <td style="background-color: @(item.ColorInfo != null ? $"rgb({item.ColorInfo.Red}, {item.ColorInfo.Green}, {item.ColorInfo.Blue})" : "white");"></td>
             </tr>
         }
     </tbody>
