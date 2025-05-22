@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\programvareutvikling\\eksamen\\Gruppe3-TSD2491\\Gruppe3.csproj": {}
+    "/home/admin1808/TSD2491-Gruppe3/Gruppe3/Gruppe3.csproj": {}
   },
   "projects": {
-    "C:\\programvareutvikling\\eksamen\\Gruppe3-TSD2491\\Gruppe3.csproj": {
+    "/home/admin1808/TSD2491-Gruppe3/Gruppe3/Gruppe3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\programvareutvikling\\eksamen\\Gruppe3-TSD2491\\Gruppe3.csproj",
+        "projectUniqueName": "/home/admin1808/TSD2491-Gruppe3/Gruppe3/Gruppe3.csproj",
         "projectName": "Gruppe3",
-        "projectPath": "C:\\programvareutvikling\\eksamen\\Gruppe3-TSD2491\\Gruppe3.csproj",
-        "packagesPath": "C:\\Users\\askkt\\.nuget\\packages\\",
-        "outputPath": "C:\\programvareutvikling\\eksamen\\Gruppe3-TSD2491\\obj\\",
+        "projectPath": "/home/admin1808/TSD2491-Gruppe3/Gruppe3/Gruppe3.csproj",
+        "packagesPath": "/home/admin1808/.nuget/packages/",
+        "outputPath": "/home/admin1808/TSD2491-Gruppe3/Gruppe3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\askkt\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/admin1808/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -47,31 +45,31 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -88,19 +86,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
+              "version": "[8.0.16, 8.0.16]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.15, 8.0.15]"
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.16, 8.0.16]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
+              "version": "[8.0.16, 8.0.16]"
             }
           ],
           "frameworkReferences": {
@@ -111,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.409/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
