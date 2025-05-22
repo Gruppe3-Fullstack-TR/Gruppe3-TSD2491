@@ -27,7 +27,7 @@
                 <td>@item.Category</td>
                 <td>@item.IndexDescription</td>
                 <td style="background-color: @(item.ColorInfo != null ? $"rgb({item.ColorInfo.Red}, {item.ColorInfo.Green}, {item.ColorInfo.Blue})" : "white");">
-                    @($"{item.ColorInfo.Red}, {item.ColorInfo.Green}, {item.ColorInfo.Blue}")
+                    <!-- Ikke skriv ut RGB-verdiene her -->
                 </td>
             </tr>
         }
